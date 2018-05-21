@@ -1,0 +1,29 @@
+<amexio-card [footer]="true" [header]="true" [show]="true" [height]="500" [header-align]="'left'" [footer-align]="'right'">
+    <amexio-header>
+        Inventory
+    </amexio-header>
+    <amexio-body>
+        <amexio-text-input [(ngModel)]="itemaddModel.itemCode" name="itemaddModel.itemCode" [place-holder]="'Enter Item Code'" [allow-blank]="true" [min-length]="0" [max-length]="20" [font-size]="10" [has-label]="true" (onBlur)="onBlur_itemCode($event)" (input)="input_itemCode($event)"
+            (focus)="focus_itemCode($event)">
+        </amexio-text-input>
+        <amexio-text-input [(ngModel)]="itemaddModel.itemName" name="itemaddModel.itemName" [place-holder]="'Item Name'" [allow-blank]="true" [min-length]="0" [max-length]="20" [font-size]="10" [has-label]="true" (onBlur)="onBlur_itemName($event)" (input)="input_itemName($event)"
+            (focus)="focus_itemName($event)">
+        </amexio-text-input>
+        <amexio-textarea-input [(ngModel)]="itemaddModel.descTxt" name="itemaddModel.descTxt" [place-holder]="'Description of item'" [allow-blank]="true" [font-size]="10" [has-label]="true" [columns]="'2'" (onBlur)="onBlur_descTxt($event)" (input)="input_descTxt($event)"
+            (focus)="focus_descTxt($event)">
+        </amexio-textarea-input>
+        <amexio-number-input [(ngModel)]="itemaddModel.quantity" name="itemaddModel.quantity" [place-holder]="'Enter quantity'" [allow-blank]="true" [font-size]="10" [has-label]="true" [min-value]="0" [max-value]="20" (onBlur)="onBlur_quantity($event)" (input)="input_quantity($event)"
+            (focus)="focus_quantity($event)">
+        </amexio-number-input>
+        <amexio-number-input [(ngModel)]="itemaddModel.price" name="itemaddModel.price" [place-holder]="'Enter unit price'" [allow-blank]="true" [font-size]="10" [has-label]="true" [min-value]="0" [max-value]="20" (onBlur)="onBlur_price($event)" (input)="input_price($event)"
+            (focus)="focus_price($event)">
+        </amexio-number-input>
+
+    </amexio-body>
+
+    <amexio-action>
+        <amexio-button [label]="'Add Item'" [type]="'default'" [tooltip]="'button'" [size]="'default'" [form-bind]="'addBtn'" (onClick)="onClick_addBtn($event)">
+        </amexio-button>
+
+    </amexio-action>
+</amexio-card>
